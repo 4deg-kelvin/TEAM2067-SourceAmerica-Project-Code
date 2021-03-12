@@ -24,8 +24,8 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
-                        
-                        <Border CornerRadius="5" x:Name="Border" Background="LightGray" BorderBrush="Bisque">
+
+                        <Border CornerRadius="5" x:Name="Border" Background="LightGray" BorderBrush="Black" BorderThickness="3">
                             <Grid>
                                 <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Name="content"/>
                             </Grid>

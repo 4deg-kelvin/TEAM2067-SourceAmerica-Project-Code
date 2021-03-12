@@ -78,12 +78,13 @@ namespace TEAM2067_SourceAmerica_Project.ViewModels
                 currentWorksheet.Cells[row, "D"] = employee.RFID_ID;
                 currentWorksheet.Cells[row, "E"] = employee.Fullname;
                 currentWorksheet.Cells[row, "F"] = employee.JobId;
-                currentWorksheet.Cells[row, "G"] = employee.CurrentSalary != null ? (double?)employee.CurrentSalary.PayPerHour : (double?)0;
-                currentWorksheet.Cells[row, "H"] = employee.Job.JobName;
-                currentWorksheet.Cells[row, "I"] = employee.ClockedInTime.ToString();
-                currentWorksheet.Cells[row, "J"] = employee.HoursWorked;
-                currentWorksheet.Cells[row, "K"] = employee.TotalPay.ToString("C",CultureInfo.CurrentCulture);
-                currentWorksheet.Cells[row, "L"] = "n/a";
+                currentWorksheet.Cells[row, "G"] = employee.IsClockedIn;
+                currentWorksheet.Cells[row, "H"] = employee.CurrentSalary != null ? (double?)employee.CurrentSalary.PayPerHour : (double?)0;
+                currentWorksheet.Cells[row, "I"] = employee.Job.JobName;
+                currentWorksheet.Cells[row, "J"] = employee.ClockedInTime.ToString();
+                currentWorksheet.Cells[row, "K"] = employee.HoursWorked;
+                currentWorksheet.Cells[row, "L"] = employee.TotalPay.ToString("C",CultureInfo.CurrentCulture);
+                currentWorksheet.Cells[row, "M"] = "n/a";
             }
             // Auto fit all columns
             for (int i = 1; i < currentWorksheet.UsedRange.Columns.Count; i++ )

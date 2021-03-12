@@ -48,6 +48,8 @@
                 <DataGridTextColumn Header="HoursWorked" Binding="{Binding HoursWorked}" Width="SizeToHeader"/>
                 <DataGridTextColumn Header="Job Name" Binding="{Binding Job.JobName}" Width="SizeToHeader"/>
                 <DataGridTextColumn Header="Current Salary" Binding="{Binding CurrentSalary.SalaryName, TargetNullValue='n/a'}"/>
+                <DataGridTextColumn Header="ClockedInTime" Binding ="{Binding ClockedInTime, TargetNullValue='n/a'}"  Width="SizeToHeader"/>
+                <DataGridTextColumn Header="IsClockedIn" Binding="{Binding IsClockedIn}" Width ="SizeToHeader"/>
             </DataGrid.Columns>
         </DataGrid>
 

@@ -94,6 +94,7 @@ namespace TEAM2067_SourceAmerica_Project.Models
                     var indicatedSalary = collection.Where(x => x.SalaryId == SalaryId).First();
                     //Set current salary object to the one found by indicatedSalary
                     Employee.CurrentSalary = indicatedSalary;
+                    Employee.IsClockedIn = true;
 
 
                     ctx.SaveChanges();
@@ -140,6 +141,10 @@ namespace TEAM2067_SourceAmerica_Project.Models
                         //Assign pay for session to Employee Records
                         Employee.TotalPay += TotalPay;
 
+                        //Remove CurrentSalary to be null
+                        Employee.CurrentSalary = null;
+
+                        Employee.IsClockedIn = false;
                         ctx.SaveChanges();
                         return true;
                     }

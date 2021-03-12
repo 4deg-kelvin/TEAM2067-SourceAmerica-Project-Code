@@ -23,6 +23,7 @@ namespace TEAM2067_SourceAmerica_Project.Models
             get { return $"{FirstName} {LastName}"; }
         }
         public int JobId { get; set; }
+        public bool IsClockedIn { get; set; } = false;
         
         
         
