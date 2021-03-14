@@ -29,7 +29,7 @@
             <Button Style="{StaticResource DefaultButton1}" Command="{Binding Source={StaticResource LoginViewmodel}, Path=TryConnectSerialPortCommand}" Content="Connect Serial Port" ToolTip="Try to connect to a serial port"
                     Width="110" FontSize="12"/>
         </StackPanel>
-       
-        
+        <TextBlock Style="{StaticResource DefaultFont}" FontSize="12" FontStyle="Italic" Text="IP of Team 2067 in 2021 for SourceAmerica (WIP)" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+
     </Grid>
 </UserControl>

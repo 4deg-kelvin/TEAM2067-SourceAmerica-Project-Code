@@ -75,13 +75,14 @@ namespace TEAM2067_SourceAmerica_Project.ViewModels
                 {
                     SerialPortAccess.StartCOMPort();
                     SerialPortConnected = true;
+                    MessageBox.Show("Connection Successful", "COM Connection", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else
-                    MessageBox.Show("Serial Port is already open");
+                    MessageBox.Show("Serial Port is already open", "COM Connection", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (Exception e)
             {
-                MessageBox.Show("Could not connect COM port");
+                MessageBox.Show("Could not connect COM port", "COM Connection", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
         
